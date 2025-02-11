@@ -1,0 +1,19 @@
+'use strict';
+
+const getal1Input = document.getElementById('getal1');
+const getal2Input = document.getElementById('getal2');
+const berekenKnoop = document.getElementById('bereken');
+const resultaatVeld = document.getElementById('resultaat');
+
+berekenKnoop.addEventListener('click', () => {
+  const nr1 = Number(getal1Input.value);
+  const nr2 = Number(getal2Input.value);
+
+  if (isNaN(nr1) || isNaN(nr2)) {
+    resultaatVeld.textContent = 'Voer a.u.b geldig getal in!';
+    return;
+  }
+
+  const som = nr1 + nr2;
+  resultaatVeld.textContent = `${som}`;
+});
